@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voice To‑Do + Reminders (12‑hour Time)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar ">
+        <div class="navbar-container">
+            <h1 class="navbar-title">🎯 Voice To‑Do Website</h1>
+        </div>
+    </nav>
+    <section class="hero" id="landing">
+        <div class="hero-inner">
+            <h1 class="hero-title">
+                Organize Your Day — <span class="accent">Hands‑Free</span>
+            </h1>
+            <p class="hero-tag">
+                Speak your tasks, set quick reminders, and stay on top of everything without lifting a finger.
+            </p>
+            <a href="#controls" class="cta">
+                Get Started <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div>
+            <h2 class="card-title">Quick Task Entry</h2><br>
+
+            <div id="controls">
+
+                <input list="langOptions" id="langSel" placeholder="🌐 Recognition language" />
+
+                <input id="taskInput" placeholder="Task title…" autocomplete="off" />
+                <input id="dateInput" type="date" />
+                <input id="timeInput" type="time" step="60" />
+                <select id="ampm">
+                    <option>AM</option>
+                    <option>PM</option>
+                </select>
+
+                <button id="addBtn">Add task</button>
+                <button id="micBtn">🎙️ Speak</button>
+            </div>
+
+            <datalist id="langOptions">
+                <option value="🇮🇳 Tanglish / Hinglish">
+                <option value="🇺🇸 English">
+                <option value="🇮🇳 Hindi">
+                <option value="🇮🇳 Tamil">
+            </datalist>
+        </div>
+
+        <div>
+            <h2 id="taskHeading" class="sec-card">Your Tasks</h2><br>
+            <ul id="taskList">
+            </ul>
+            <p id="noTasksMsg" style="color: #fff; text-align: center; font-size: 1.1rem;margin-top: -38px;">No tasks
+                yet. Create a task to get started!</p>
+            <p id="status"></p>
+        </div>
+
+        <div id="toastBucket"></div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
